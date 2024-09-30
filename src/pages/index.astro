@@ -1,0 +1,435 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro.">
+	<header>
+        <h1>
+            <a href="/" aria-label="Coming Soon">
+            <span>Coming Soon</span>
+            <img src="logo.svg" alt="Coming Soon Template" width="96" height="48">
+            </a>
+        </h1>
+    </header>
+    <main>
+        <p>There’s lots of ways to be, as a person. And some people express their deep appreciation in different ways. But one of the ways that I believe people express their appreciation to the rest of humanity is to make something wonderful and put it out there.</p>
+        <p>We are taking ideas from the personal computer, web browser, and latest in Al, to create a computing experience that's powerful yet delightfully human.</p>
+        <p>Announcing <a href="bbb.bot">BBB</a>, a AI platform that help governments, be effecient</p>
+        <ul>
+            <li>Private, secure data</li>
+            <li>Real-time solutions, at your fingertips</li>
+            <li>Scalable across agencies</li>
+            <li>Empowering voices, simplifying bureaucracy</li>
+        </ul>
+        <p>We are launching gradually! Stay tuned.</p>
+        <figure>
+            <img src="/sigg.png" alt="sign" width="90" height="40">
+        </figure>
+		<!-- EV's signature size is [at] W: 90 & H: 40 && Slijo's signature is [at] W:  -->
+        <dl>
+            <dt>Voila!</dt>
+            <dd>Team BBB</dd>
+            <dd><a href="mailto:bonjour@bbb.bot">bonjour@bbb.bot</a></dd>
+        </dl>
+
+        <p role="complementary" aria-label="P.S.">
+            <strong>P.S.</strong> Join our waiting to fly w/ us!
+        </p>
+
+        <section>
+        <form name="subscribe-form" target="_self" aria-label="Subscribe"  action="https://formspree.io/f/meojypkb"
+  method="POST">
+            <aside>
+                <fieldset>
+                    <input type="email" class="text-input" autocomplete="email" placeholder="Email address" name="EMAIL" tabindex="0">
+                    <button class="button" type="submit" name="subscribe" tabindex="-1"> &#8594; </button>
+                </fieldset>
+            </aside>
+        </form>
+        </section>
+
+    </main>
+</Layout>
+
+<style>
+@import "@new-ui/foundations";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box
+}
+
+html,
+body,
+div,
+span,
+applet,
+button,
+input,
+select,
+textarea,
+object,
+iframe h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    background: transparent;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    margin: 0;
+    min-width: 0;
+    outline: 0;
+    padding: 0;
+    vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+img,
+svg {
+    display: block
+}
+
+ol,
+ul,
+menu {
+    list-style: none
+}
+
+body {
+    background: var(--background);
+    color: var(--text-primary);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--transitional);
+    font-feature-settings: 'liga', 'dlig';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: var(--desktop-body-xl);
+    line-height: var(--lh-desktop-body-xl);
+    font-style: normal;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility
+}
+
+@supports(-webkit-touch-callout: none) {
+    body {
+        min-height: -webkit-fill-available
+    }
+}
+
+header,
+main {
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    width: min(100%, 32em)
+}
+
+header {
+    height: var(--spacing-16, 6em)
+}
+
+header h1 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: flex-end
+}
+
+header h1 a {
+    height: var(--spacing-11, 3em);
+    max-width: 5.96em
+}
+
+header h1 a span {
+    display: none
+}
+
+header h1 a img {
+    height: 100%;
+    max-height: 100%;
+    width: auto
+}
+
+main {
+    flex: 1;
+    margin-bottom: var(--spacing-15, 5em)
+}
+
+main>*+* {
+    margin-top: var(--spacing-08, 1.5em)
+}
+
+ol,
+ul {
+    display: flex;
+    flex-direction: column
+}
+
+ol li,
+ul li {
+    position: relative
+}
+
+ol li:before,
+ul li:before {
+    font-feature-settings: 'case', 'tnum';
+    left: 0;
+    position: absolute;
+    top: 0
+}
+
+ol {
+    counter-reset: counter;
+    gap: var(--spacing-02)
+}
+
+ol li {
+    counter-increment: counter;
+    padding-left: var(--spacing-09)
+}
+
+ol li:before {
+    content: counter(counter) '.';
+    text-align: right;
+    width: var(--spacing-08)
+}
+
+ul {
+    gap: var(--spacing-02);
+    padding: 0;
+}
+
+ul li {
+    padding-left: var(--spacing-08);
+    list-style: none;
+}
+
+ul li:before {
+    content: '—';
+    opacity: 0.24
+}
+
+figure {
+    margin-top: var(--spacing-08);
+    margin-left: calc(var(--spacing-04) * -1)
+}
+
+dl {
+    font-feature-settings: 'case';
+    font-size: var(--desktop-body);
+    line-height: var(--lh-desktop-body);
+    margin-top: var(--spacing-04)
+}
+
+dl dt {
+    font-weight: 600
+}
+
+dl dd {
+    color: var(--text-secondary);
+}
+
+form {
+    margin-bottom: var(--spacing-13);
+    position: relative;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none
+}
+
+form aside {
+    display: flex;
+    position: relative
+}
+
+form aside fieldset {
+    display: flex;
+    left: 0;
+    position: absolute;
+    padding: var(--spacing-00);
+    width: 100%;
+}
+
+input {
+    background-color: var(--background);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--spacing-03);
+    width: calc(var(--spacing-17) * 3);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: var(--text-primary);
+    flex: 1;
+    padding: var(--spacing-03) var(--spacing-05);
+}
+
+input ::placeholder {
+    color: var(--text-placeholder)
+}
+
+input:hover {
+    border-color: var(--border)
+}
+
+input:focus {
+    border-color: var(--border);
+    outline: 1px solid var(--order-focus);
+    outline-offset: 0
+}
+
+.button {
+    background: var(--button);
+    border-radius: var(--spacing-02);
+    font-family: system-ui, sans-serif;
+    color: var(--text-on-color);
+    cursor: pointer;
+    display: inline-flex;
+    font-weight: 600;
+    padding: 0.25em 1.3em;
+    text-decoration: none;
+    white-space: nowrap;
+    align-items: center;
+    position: inherit;
+    top: var(--spacing-02);
+    right: var(--spacing-02);
+    height: 32px;
+}
+
+.button:hover {
+    background: var(--button-hover)
+}
+
+.button:active {
+    background: var(--button-active)
+}
+
+a {
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-thickness: 0.06em;
+    text-underline-offset: 0.1em;
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--link-hover);
+}
+
+a:visited {
+    color: var(--link-visited);
+}
+
+b,
+strong {
+    font-weight: 600;
+    letter-spacing: normal;
+}
+
+i,
+em {
+    font-style: italic;
+}
+
+@media (max-width: 50rem) {
+
+    header,
+    main {
+        padding-left: var(--spacing-09, 2em);
+        padding-right: var(--spacing-09, 2em);
+    }
+    main form aside fieldset input {
+      width: 100%;
+    }
+    .button {
+      top: var(--spacing-02);
+      right: var(--spacing-02);
+      height: 30px;
+    }
+}
+</style>
